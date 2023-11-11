@@ -9,11 +9,24 @@ import 'package:flutter/material.dart';
    class _InitPageState extends State<InitPage>{ 
 
     int _currentIndex = 0;
+    List<Widget> pages=[ 
+      Center(child: Text("Principal")),
+      Center(child: Text("Shorts")),
+      Center(child: Text("Agregar")),
+      Center(child: Text("Suscripcion")),
+      Center(child: Text("Biblioteca")),
+    ];
 
     @override
       Widget build(BuildContext context) {
     return Scaffold(
+      body: pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar( 
+        backgroundColor: Color(0xff212121),
+        selectedItemColor: Colors.white, //aplicando color al elemento que se selecciona
+        unselectedItemColor: Colors.white70,//esta aplicando color a los elementos que no esta seleccionado
+        selectedFontSize: 12.0,
+        unselectedFontSize: 12.0,
       type: BottomNavigationBarType.fixed,  ///nos permite aumentar bas de 3 botones      
         currentIndex: _currentIndex, //este comando lo que hace es seleccionar los botones de bar
         onTap: (int value){  
