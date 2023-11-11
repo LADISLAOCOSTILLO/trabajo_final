@@ -30,6 +30,23 @@ import 'package:trabajo_final/ui/general/colors.dart';
        height: 40.0,
         //width: 80.0,
         ),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.cast, color: Colors.white,),),
+          IconButton(onPressed: (){}, icon: Icon(Icons.notifications_none, color: Colors.white,),),
+          IconButton(onPressed: (){}, icon: Icon(Icons.search  , color: Colors.white,),),
+          const SizedBox(
+            width: 6.0,
+          ),
+          CircleAvatar( 
+            backgroundColor: Colors.white12,
+            radius: 16.0,
+            backgroundImage: NetworkImage("https://images.pexels.com/photos/3789888/pexels-photo-3789888.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",),
+          ),
+          const SizedBox(
+            width: 13.0,
+          )
+
+        ],
         
       
       ),
