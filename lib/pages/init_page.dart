@@ -5,6 +5,25 @@ class InitPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(); ///es una estructura de alto nivel que proporciona la estructura visual básica para una aplicación Flutter
+    return Scaffold(
+
+      bottomNavigationBar: BottomNavigationBar( 
+        items: [ 
+          BottomNavigationBarItem(
+            label: "home",
+            icon: Icon( 
+              Icons.add,
+            ),
+            ),
+            BottomNavigationBarItem(
+              label: "perfil",
+              icon: Icon(  
+                Icons.add,
+              )
+              )
+        ],
+
+      ),
+    ); ///es una estructura de alto nivel que proporciona la estructura visual básica para una aplicación Flutter
   }
 }
