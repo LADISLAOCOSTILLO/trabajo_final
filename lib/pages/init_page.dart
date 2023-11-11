@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trabajo_final/ui/general/colors.dart';
 
  class InitPage extends StatefulWidget {
   const InitPage({Key? key}): super(key: key);
@@ -20,13 +21,26 @@ import 'package:flutter/material.dart';
     @override
       Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kBrandPrimaryColor,
+      appBar: AppBar ( 
+        elevation: 0,
+        backgroundColor: kBrandPrimaryColor,
+
+        title: Image.asset('assets/images/youtube.png',
+       height: 40.0,
+        //width: 80.0,
+        ),
+        
+      
+      ),
+
       body: pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar( 
-        backgroundColor: Color(0xff212121),
+        backgroundColor: kBrandPrimaryColor,
         selectedItemColor: Colors.white, //aplicando color al elemento que se selecciona
         unselectedItemColor: Colors.white70,//esta aplicando color a los elementos que no esta seleccionado
         selectedFontSize: 12.0,
-        unselectedFontSize: 12.0,
+        unselectedFontSize: 9.0,
       type: BottomNavigationBarType.fixed,  ///nos permite aumentar bas de 3 botones      
         currentIndex: _currentIndex, //este comando lo que hace es seleccionar los botones de bar
         onTap: (int value){  
