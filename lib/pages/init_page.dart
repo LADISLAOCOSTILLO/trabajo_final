@@ -1,16 +1,29 @@
 import 'package:flutter/material.dart';
 
-class InitPage extends StatelessWidget {
+ class InitPage extends StatefulWidget {
   const InitPage({Key? key}): super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
+  State<InitPage>createState() => _InitPageState();
+   }
+   class _InitPageState extends State<InitPage>{ 
 
+    int _currentIndex = 0;
+
+    @override
+      Widget build(BuildContext context) {
+    return Scaffold(
       bottomNavigationBar: BottomNavigationBar( 
       type: BottomNavigationBarType.fixed,  ///nos permite aumentar bas de 3 botones      
+        currentIndex: _currentIndex, //este comando lo que hace es seleccionar los botones de bar
+        onTap: (int value){  
+          _currentIndex = value;
+          setState(() {});
+             },
+          
+                
         items: [ 
-          BottomNavigationBarItem(
+            BottomNavigationBarItem(
             label: "PRINCIPAL",
             icon: Icon( 
               Icons.home_filled,
@@ -33,14 +46,13 @@ class InitPage extends StatelessWidget {
                     ),
                      ),
                    ),
-                
-                BottomNavigationBarItem(
+            BottomNavigationBarItem(
                 label: "SUSCRIPCIONES",
                 icon: Icon(  
                  Icons.subscriptions_rounded,
                 ),
                ),
-              BottomNavigationBarItem(
+            BottomNavigationBarItem(
                 label: "BIBLIOTECA",
                 icon: Icon( 
                   Icons.video_collection_rounded,
