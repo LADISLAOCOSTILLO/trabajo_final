@@ -27,7 +27,7 @@ import 'package:trabajo_final/ui/general/colors.dart';
         backgroundColor: kBrandPrimaryColor,
 
         title: Image.asset('assets/images/youtube.png',
-       height: 40.0,
+       height: 26.0,
         //width: 80.0,
         ),
         actions: [
