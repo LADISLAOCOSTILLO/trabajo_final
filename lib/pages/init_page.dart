@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trabajo_final/pages/home_page.dart';
 import 'package:trabajo_final/ui/general/colors.dart';
 
 class InitPage extends StatefulWidget {
@@ -11,7 +12,7 @@ class InitPage extends StatefulWidget {
 class _InitPageState extends State<InitPage> {
   int _currentIndex = 0;
   List<Widget> pages = [
-    Center(child: Text("Principal")),
+    HomePage(),
     Center(child: Text("Shorts")),
     Center(child: Text("Agregar")),
     Center(child: Text("Suscripcion")),
@@ -38,35 +39,33 @@ class _InitPageState extends State<InitPage> {
               color: Colors.white,
             ),
           ),
-
-
-
           IconButton(
             onPressed: () {},
             icon: Stack(
               clipBehavior: Clip.none,
-              children: [ 
-                Icon( 
+              children: [
+                Icon(
                   Icons.notifications_none,
                   color: Colors.white,
                 ),
                 Positioned(
                   top: -2,
                   right: -4,
-                  child: Container( 
+                  child: Container(
                     padding: EdgeInsets.all(1.4),
-                    decoration: BoxDecoration( 
+                    decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.red,
                     ),
-                    child: Text("9+",style: TextStyle(fontSize: 11.0 ),),
-                   ),                 
-                  )
-
+                    child: Text(
+                      "9+",
+                      style: TextStyle(fontSize: 11.0),
+                    ),
+                  ),
+                )
               ],
             ),
-             ),
-                           
+          ),
           IconButton(
             onPressed: () {},
             icon: Icon(
