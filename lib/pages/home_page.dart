@@ -20,7 +20,6 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             SingleChildScrollView(
-              
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
               child: Row(
@@ -67,13 +66,12 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-
             Column( 
               children: [ 
                 Stack( 
                   children:  [  
                 Image.network(
-                  "https://vod-progressive.akamaized.net/exp=1699843582~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2199%2F19%2F485996873%2F2176892505.mp4~hmac=e57302d0d8cdc38b5f2a1005b45ad8ab1b4b4dccf487455b4f5cc1e2472b70be/vimeo-prod-skyfire-std-us/01/2199/19/485996873/2176892505.mp4",
+                  "https://images.pexels.com/photos/88476/pexels-photo-88476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                   width: double.infinity,
                   height: height* 0.3,
                   fit: BoxFit.cover,
@@ -104,7 +102,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 title: Text(
-                  "Ladislao Costillo Camacho",
+                  "Loren Ipsum Dolor Sit Amet",
                   
                   style: TextStyle(  
                     color: Colors.yellow,
@@ -112,7 +110,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 subtitle: Text( 
-                  "Alanxelmundo · 6.5 m de visitas hace 2 años",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nulla tincidunt rutrum hendrerit, neque leo interdum ",
                   style: TextStyle( 
                     color: Colors.white54,
                     fontSize: 13.0,
@@ -128,11 +126,13 @@ class HomePage extends StatelessWidget {
                         color: Colors.white,
                        ),
                     ),
+
                   ],
                 ),
               ),
               ],
             ),
+          
           ],
         ),
       ),
