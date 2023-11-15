@@ -110,7 +110,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 subtitle: Text( 
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nulla tincidunt rutrum hendrerit, neque leo interdum ",
+                  "alanxelmundo 6.5 M DE Visitas hace 2 años",
                   style: TextStyle( 
                     color: Colors.white54,
                     fontSize: 13.0,
