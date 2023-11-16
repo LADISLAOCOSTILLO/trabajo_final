@@ -13,8 +13,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    _apiService.getVideos();
-    double height=MediaQuery.of(context).size.height;
+    //_apiService.getVideos();
+
+    //double height=MediaQuery.of(context).size.height;
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -77,7 +78,7 @@ class HomePage extends StatelessWidget {
                 Image.network(
                   "https://images.pexels.com/photos/88476/pexels-photo-88476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                   width: double.infinity,
-                  height: height* 0.3,//
+                  height:  0.3,//
                   fit: BoxFit.cover, 
                 ),
                 Positioned( 
