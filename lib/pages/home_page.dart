@@ -1,16 +1,19 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:trabajo_final/services/api_services.dart';
 import 'package:trabajo_final/ui/general/colors.dart';
 import 'package:trabajo_final/ui/widgets/item_filter_widget.dart';
 import 'package:trabajo_final/ui/widgets/item_video_widget.dart';
 import 'package:video_player/video_player.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final APIService _apiService = APIService();
+  //const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    _apiService.getVideos();
     double height=MediaQuery.of(context).size.height;
     return SingleChildScrollView(
       child: Padding(
