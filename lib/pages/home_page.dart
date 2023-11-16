@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:trabajo_final/ui/general/colors.dart';
 import 'package:trabajo_final/ui/widgets/item_filter_widget.dart';
+import 'package:trabajo_final/ui/widgets/item_video_widget.dart';
 import 'package:video_player/video_player.dart';
 
 class HomePage extends StatelessWidget {
@@ -73,8 +74,8 @@ class HomePage extends StatelessWidget {
                 Image.network(
                   "https://images.pexels.com/photos/88476/pexels-photo-88476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                   width: double.infinity,
-                  height: height* 0.3,
-                  fit: BoxFit.cover,
+                  height: height* 0.3,//
+                  fit: BoxFit.cover, 
                 ),
                 Positioned( 
                   bottom: 0,
@@ -96,7 +97,7 @@ class HomePage extends StatelessWidget {
                 ),
               ListTile( 
                 contentPadding: EdgeInsets.zero,
-                leading: CircleAvatar( 
+                leading: CircleAvatar(  //imagen en circulo
                   backgroundColor: Colors.white12,
                   backgroundImage: NetworkImage("https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                   ),
@@ -110,14 +111,14 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 subtitle: Text( 
-                  "alanxelmundo 6.5 M DE Visitas hace 2 años",
+                  "alanxelmundo • 6.5 M DE Visitas hace 2 años",
                   style: TextStyle( 
                     color: Colors.white54,
                     fontSize: 13.0,
                   ),
 
                 ),
-                trailing: Column(  
+                trailing: Column(     ///para los 3 puntos
                   children: [ 
                     Container( 
                       margin: const EdgeInsets.only(top: 4.0),
@@ -132,7 +133,11 @@ class HomePage extends StatelessWidget {
               ),
               ],
             ),
-          
+          ItemVideoWidget(),
+          ItemVideoWidget(),
+          ItemVideoWidget(),
+          ItemVideoWidget(),
+          ItemVideoWidget(),
           ],
         ),
       ),
