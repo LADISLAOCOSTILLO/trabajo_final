@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                   right: 0,
                   child: Container( 
                     padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 2.0),
-                    margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                    margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 2.0),
                     color: Colors.black.withOpacity(0.7) ,
                   child: Text( 
                     "23:22",
@@ -163,9 +163,12 @@ class _HomePageState extends State<HomePage> {
           ),
           ListView.builder( 
             shrinkWrap: true,
-            itemCount: videos.length,
+            physics: ScrollPhysics(),
+            itemCount: videos.length, //aqui ya lo tenemos las peliculas
             itemBuilder: (BuildContext context, int index){ 
-              return ItemVideoWidget();
+              return ItemVideoWidget( 
+                videoModel: videos[index],
+              );
             }
 
           ),

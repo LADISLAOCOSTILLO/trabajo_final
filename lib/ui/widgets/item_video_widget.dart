@@ -1,9 +1,15 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:trabajo_final/models/video_model.dart';
 
 class ItemVideoWidget  extends StatelessWidget {
-  const ItemVideoWidget ({Key?key}): super (key: key);
+  //const ItemVideoWidget ({Key?key}): super (key: key);
+  VideoModel videoModel;
+  ItemVideoWidget({ 
+    required this.videoModel,
+  });
+
 
   @override
 
@@ -16,10 +22,11 @@ class ItemVideoWidget  extends StatelessWidget {
                   Stack( 
                     children:  [  
                   Image.network(
-                    "https://images.pexels.com/photos/88476/pexels-photo-88476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    videoModel.snippet.thumbnails.medium.url,
                     width: double.infinity,
                     height: height* 0.3,//
                     fit: BoxFit.cover, 
+                    
                   ),
                   Positioned( 
                     bottom: 0,

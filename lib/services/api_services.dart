@@ -11,7 +11,7 @@ class APIService {
 
 Future<List<VideoModel>>getVideos() async {
   List<VideoModel> videoModel = [];
-  String _path="$pathProduction/search?part=snippet&key=$apiKey&maxResults=30&regionCode=PE";
+  String _path="$pathProduction/search?part=snippet&key=$apiKey&maxResults=15&regionCode=PE";
 Uri _Uri= Uri.parse(_path);
 http.Response response = await http.get(_Uri);
 if (response.statusCode == 200){ 
