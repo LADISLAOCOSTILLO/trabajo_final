@@ -1,4 +1,4 @@
-import 'dart:math';
+//import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:trabajo_final/models/video_model.dart';
@@ -6,7 +6,7 @@ import 'package:trabajo_final/services/api_services.dart';
 import 'package:trabajo_final/ui/general/colors.dart';
 import 'package:trabajo_final/ui/widgets/item_filter_widget.dart';
 import 'package:trabajo_final/ui/widgets/item_video_widget.dart';
-import 'package:video_player/video_player.dart';
+//import 'package:video_player/video_player.dart';
 
 class HomePage extends StatefulWidget {
   @override
